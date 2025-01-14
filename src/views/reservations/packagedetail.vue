@@ -35,11 +35,13 @@ const storeReservation = async () => {
   await api
     .post("/api/reservations", formData)
     .then(() => {
-      //redirect
+      // Tampilkan notifikasi berhasil
+      alert("Reservasi berhasil dibuat!");
+
+      // Redirect ke halaman reservations
       router.push({ path: "/reservations" });
     })
     .catch((error) => {
-      //assign response error data to state "errors"
       errors.value = error.response.data;
     });
 };
