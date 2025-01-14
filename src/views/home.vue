@@ -48,7 +48,7 @@ onMounted(() => {
     <img src="../assets/CANDI.jpeg" alt="Background" class="absolute inset-0 w-full h-full object-cover" />
     <div class="absolute inset-0 bg-white/20 backdrop-brightness-125"></div>
     <div class="w-[65%] h-[90%] relative z-10">
-      <h1 class="text-3xl" style="font-family: 'Varela Round', serif">MAU LIBURAN KEMANA?</h1>
+      <h1 class="text-3xl text-center" style="font-family: 'Varela Round', serif">MAU LIBURAN KEMANA?</h1>
       <div class="grid grid-cols-4 gap-9 mt-4 text-white font-semibold" style="font-family: 'Kanit', serif">
         <!-- Dynamic content from database -->
         <div v-for="(packageItem, index) in packages" :key="index" class="h-[34vh] bg-white rounded-lg drop-shadow-xl shadow-xl hover:scale-105 duration-150 relative overflow-hidden">

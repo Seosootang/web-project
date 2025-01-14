@@ -19,9 +19,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "create" */ "../views/admins/package.vue"),
   },
   {
-    path: "/reservations/packagedetail",
+    path: "/reservations/packagedetail/:id",
     name: "reservations.packagedetail",
     component: () => import("../views/reservations/packagedetail.vue"),
+  },
+  {
+    path: "/admins/reservation",
+    name: "admins.reservation",
+    component: () => import( "../views/admins/reservation.vue"),
   },
 ];
 //create router

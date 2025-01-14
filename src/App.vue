@@ -2,19 +2,25 @@
   <div>
     <nav class="bg-white h-16 w-[100vw] sticky top-0 z-10 flex items-center justify-between px-5">
       <div class="flex flex-row gap-8">
-        <a href="#" class="text-primary hover:text-slate-900">Beranda</a>
-        <a href="#" class="text-primary hover:text-slate-900">Event</a>
-        <a href="#" class="text-primary hover:text-slate-900">Promo</a>
+<img src="./assets/logomojoskem.png" class="w-[100px] " alt="">
       </div>
       <div class="border border-black rounded-md ">
         <i>&#128269;</i>
         <input type="text" placeholder="Cari" class="text-sm font-light w-96 ">
       </div>
       <div class="flex gap-1">
-        <button
-          class="hover:bg-white hover:text-primary duration-300 border-2 border-primary bg-primary rounded-lg px-4 py-1 text-white text-sm font-medium">Login</button>
-        <button
-          class="hover:bg-primary hover:text-white border-2 duration-300 border-primary bg-white rounded-lg px-4 py-1 text-primary text-sm font-medium">Register</button>
+          <router-link 
+              :to="{ name: 'home' }" 
+              >
+              <button
+          class="hover:bg-white hover:text-primary duration-300 border-2 border-primary bg-primary rounded-lg px-4 py-1 text-white text-sm font-medium">Home</button>
+            </router-link>
+          <router-link 
+              :to="{ name: 'admins.index' }" 
+              >
+              <button
+          class="hover:bg-primary hover:text-white border-2 duration-300 border-primary bg-white rounded-lg px-4 py-1 text-primary text-sm font-medium">Admin Menu</button>
+            </router-link>
       </div>
     </nav>
     <router-view></router-view>
