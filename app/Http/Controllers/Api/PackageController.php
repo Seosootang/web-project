@@ -102,7 +102,11 @@ class PackageController extends Controller
         if ($request->hasFile('image1')) {
 
             $image1 = $request->file('image1');
+            $image2 = $request->file('image2');
+            $image3 = $request->file('image3');
             $image1->storeAs('public/packages', $image1->hashName());
+            $image2->storeAs('public/packages', $image2->hashName());
+            $image3->storeAs('public/packages', $image3->hashName());
 
             Storage::delete('public/packages/' . basename($package->image1));
 
